@@ -1,0 +1,32 @@
+:root {
+    --color1: #23282d;
+    --color2: #0073aa;
+    --color3: #eee;
+    --color4: #32373c;
+    --color5: #cbcbcb;
+    --outline: #8585857d;
+    --box-background: rgba(248, 248, 248, 0.7);
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 3px grey;
+    background-color: var(--box-background);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--color2);
+    border-radius: 4px;
+}
+
+body,
+.mce-container,
+.mceContentBody,
+body body#tinymce,
+body#tinymce,
+div.mce-panel {
+    background: var(--color1) !important;
+    background-color: var(--color1) !important;
+    color: var(--color3) !important;
+}

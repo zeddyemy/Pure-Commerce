@@ -1,0 +1,132 @@
+#hero-header {
+    --hero-header-height: 560;
+    --hero-header-height: 100svh;
+    min-height: var(--hero-header-height);
+    position: relative;
+    color: #e9e9e9;
+    border-radius: 0 0 50px 50px;
+    box-shadow: var(--shadow-large);
+}
+#hero-header::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+#hero-header h1 {
+    font-size: 2em;
+    max-width: 100%;
+    text-shadow: var(--txt-shadow);
+}
+.slide {
+    height: var(--hero-header-height);
+    overflow-y: hidden;
+}
+.slide .slideCard {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: hidden;
+    height: 100%;
+}
+.slideCard img {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    border-style: none;
+}
+.slideContent {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    align-items: normal;
+    padding: 0px var(--site-pad);
+    background-color: #05050570;
+    gap: 5px 0px;
+}
+#slideControl {
+    display: none;
+}
+
+.hero-header-content {
+    position: relative;
+    text-align: center;
+}
+
+.mouse {
+    position: absolute;
+    bottom: 40px;
+    z-index: 5;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    display: block;
+}
+.mouse .mouse-icon {
+    display: block;
+    width: 25px;
+    height: 45px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 15px;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    -webkit-transition: .3s all ease-in-out;
+    -o-transition: .3s all ease-in-out;
+    transition: .3s all ease-in-out;
+}
+.mouse .mouse-wheel {
+    height: 4px;
+    margin: 2px auto 0;
+    display: block;
+    width: 4px;
+    background-color: white;
+    border-radius: 50%;
+    -webkit-animation: 1.6s ease infinite wheel-up-down;
+    -moz-animation: 1.6s ease infinite wheel-up-down;
+    animation: 1.6s ease infinite wheel-up-down;
+}
+@keyframes wheel-up-down {
+    0% {
+        margin-top: 2px;
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    100% {
+        margin-top: 20px;
+        opacity: 0;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    #hero-header {
+        --hero-header-height: 550px;
+    }
+    #hero-header h1 {
+        font-size: 2.5em;
+        max-width: 600px
+    }
+}
+@media screen and (min-width: 1024px) {
+    #hero-header {
+        --hero-header-height: 79vh;
+    }
+    #hero-header h1 {
+        font-size: 2.6em;
+        max-width: 700px
+    }
+}
+@media screen and (min-width: 1440px) {
+    #hero-header h1 {
+        font-size: 3.5em;
+        max-width: 790px
+    }
+}
